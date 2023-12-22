@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "41f6fb42-8942-4dee-8b6b-b592c3bcd082",
+		"name": "Blog Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10978024"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "komal@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "komal1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/Blog-management/public/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "22|PzxMbpHM2s40VH4zJFA9eliwgDcBqhbO0ZOVLabhb4c771c3"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test option 9",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "test option 9",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/SAI/Pictures/Project purpose/images.jpg"
+						}
+					]
+				},
+				"url": "http://localhost/Blog-management/public/api/blogstore"
+			},
+			"response": []
+		},
+		{
+			"name": "Blog List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "22|PzxMbpHM2s40VH4zJFA9eliwgDcBqhbO0ZOVLabhb4c771c3"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost/Blog-management/public/api/blogList"
+			},
+			"response": []
+		},
+		{
+			"name": "Blog Like Toggle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "22|PzxMbpHM2s40VH4zJFA9eliwgDcBqhbO0ZOVLabhb4c771c3"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/Blog-management/public/api/togglelike?id=60",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Blog-management",
+						"public",
+						"api",
+						"togglelike"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "60"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
